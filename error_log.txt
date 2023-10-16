@@ -1,0 +1,95 @@
+/content/mmdetection
+/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 3 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+2023-10-12 20:19:48,416 - mmdet - INFO - Automatic scaling of learning rate (LR) has been disabled.
+<ipython-input-33-6e143a2f819b>:72: DeprecationWarning: `np.long` is a deprecated alias for `np.compat.long`. To silence this warning, use `np.compat.long` by itself. In the likely event your code does not need to work on Python 2 you can use the builtin `int` for which `np.compat.long` is itself an alias. Doing this will not modify any behaviour and is safe. When replacing `np.long`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  'labels': np.array(gt_labels, dtype=np.long),
+<ipython-input-33-6e143a2f819b>:74: DeprecationWarning: `np.long` is a deprecated alias for `np.compat.long`. To silence this warning, use `np.compat.long` by itself. In the likely event your code does not need to work on Python 2 you can use the builtin `int` for which `np.compat.long` is itself an alias. Doing this will not modify any behaviour and is safe. When replacing `np.long`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  'labels_ignore': np.array(gt_labels_ignore, dtype=np.long)
+2023-10-12 20:19:52,938 - mmdet - INFO - load checkpoint from local path: checkpoints/ssd512_coco_20210803_022849-0a47a1ca.pth
+2023-10-12 20:19:53,031 - mmdet - WARNING - The model and loaded state dict do not match exactly
+
+size mismatch for bbox_head.cls_convs.0.0.weight: copying a param with shape torch.Size([324, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([68, 512, 3, 3]).
+size mismatch for bbox_head.cls_convs.0.0.bias: copying a param with shape torch.Size([324]) from checkpoint, the shape in current model is torch.Size([68]).
+size mismatch for bbox_head.cls_convs.1.0.weight: copying a param with shape torch.Size([486, 1024, 3, 3]) from checkpoint, the shape in current model is torch.Size([102, 1024, 3, 3]).
+size mismatch for bbox_head.cls_convs.1.0.bias: copying a param with shape torch.Size([486]) from checkpoint, the shape in current model is torch.Size([102]).
+size mismatch for bbox_head.cls_convs.2.0.weight: copying a param with shape torch.Size([486, 512, 3, 3]) from checkpoint, the shape in current model is torch.Size([102, 512, 3, 3]).
+size mismatch for bbox_head.cls_convs.2.0.bias: copying a param with shape torch.Size([486]) from checkpoint, the shape in current model is torch.Size([102]).
+size mismatch for bbox_head.cls_convs.3.0.weight: copying a param with shape torch.Size([486, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([102, 256, 3, 3]).
+size mismatch for bbox_head.cls_convs.3.0.bias: copying a param with shape torch.Size([486]) from checkpoint, the shape in current model is torch.Size([102]).
+size mismatch for bbox_head.cls_convs.4.0.weight: copying a param with shape torch.Size([486, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([102, 256, 3, 3]).
+size mismatch for bbox_head.cls_convs.4.0.bias: copying a param with shape torch.Size([486]) from checkpoint, the shape in current model is torch.Size([102]).
+size mismatch for bbox_head.cls_convs.5.0.weight: copying a param with shape torch.Size([324, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([68, 256, 3, 3]).
+size mismatch for bbox_head.cls_convs.5.0.bias: copying a param with shape torch.Size([324]) from checkpoint, the shape in current model is torch.Size([68]).
+size mismatch for bbox_head.cls_convs.6.0.weight: copying a param with shape torch.Size([324, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([68, 256, 3, 3]).
+size mismatch for bbox_head.cls_convs.6.0.bias: copying a param with shape torch.Size([324]) from checkpoint, the shape in current model is torch.Size([68]).
+2023-10-12 20:19:53,039 - mmdet - INFO - Start running, host: root@1638d95b2f19, work_dir: /mydrive/aircraft_work_dir
+2023-10-12 20:19:53,040 - mmdet - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(ABOVE_NORMAL) Fp16OptimizerHook                  
+(NORMAL      ) CheckpointHook                     
+(LOW         ) EvalHook                           
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) NumClassCheckHook                  
+(LOW         ) IterTimerHook                      
+(LOW         ) EvalHook                           
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOW         ) EvalHook                           
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) Fp16OptimizerHook                  
+(NORMAL      ) CheckpointHook                     
+(LOW         ) IterTimerHook                      
+(LOW         ) EvalHook                           
+(VERY_LOW    ) TextLoggerHook                     
+(VERY_LOW    ) CheckInvalidLossHook               
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) EvalHook                           
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) NumClassCheckHook                  
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+2023-10-12 20:19:53,042 - mmdet - INFO - workflow: [('train', 1)], max: 5 epochs
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-65-ab13d910348f> in <cell line: 8>()
+      6 mmcv.mkdir_or_exist(osp.abspath(cfg.work_dir))
+      7 # epochs는 config의 runner 파라미터로 지정됨. 기본 12회
+----> 8 train_detector(model, datasets, cfg, distributed=False, validate=True)
+
+3 frames
+/usr/local/lib/python3.10/dist-packages/mmcv/runner/hooks/optimizer.py in before_run(self, runner)
+    251             wrap_fp16_model(runner.model)
+    252             # resume from state dict
+--> 253             if 'fp16' in runner.meta and 'loss_scaler' in runner.meta['fp16']:
+    254                 scaler_state_dict = runner.meta['fp16']['loss_scaler']
+    255                 self.loss_scaler.load_state_dict(scaler_state_dict)
+
+TypeError: argument of type 'NoneType' is not iterable
